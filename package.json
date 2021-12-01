@@ -1,0 +1,23 @@
+{
+  "name": "robot-routing",
+  "version": "1.0.0",
+  "description": "POST endpoint, retrieving a list of robots and returning data determining which is closest and has the highest battery level.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eaclumpkens/robot-routing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eaclumpkens/robot-routing/issues"
+  },
+  "homepage": "https://github.com/eaclumpkens/robot-routing#readme",
+  "dependencies": {
+    "node-fetch": "^3.1.0"
+  }
+}
