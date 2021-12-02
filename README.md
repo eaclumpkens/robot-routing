@@ -22,7 +22,7 @@ To use this project, first clone and navigate to the project repo in your termin
 
 ```
 $ git clone https://github.com/eaclumpkens/robot-routing.git
-$ cd ./robot-routing
+$ cd robot-routing
 ```
 
 Once the repo is cloned and you've ensured you are in the correct directory, if not previously installed, run the following code to install NPM & Netlify's CLI:
