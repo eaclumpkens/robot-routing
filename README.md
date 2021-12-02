@@ -11,12 +11,12 @@
 
 ## Concept
 
-API POST endpoint: receives a list of 100 robots from API endpoint, providing their current position on an xy-plane along and battery life. The endpoint makes an HTTP request to the robots endpoint and return which robot is the best to transport the load based on which one is closest the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest charge is returned.
+API POST endpoint: receives a list of 100 robots from API GET request, providing their current position on an xy-plane along with battery life. The endpoint returns which robot is the best to transport the load based on which is closest to the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest battery level is returned.
 
 ## Technologies
 
 - JavaScript
-- NodeJS
+- NodeJS/NPM
 - Netlify
 
 ## Installation
@@ -31,8 +31,8 @@ $ cd ./robot-routing
 Once the repo is cloned and you've ensured you are in the correct repo, if not previously installed, run the following code to install NPM & Netlify's CLI:
 
 ```
-$ npm install -g npm
-$ npm i netlify-cli -g
+$ npm install npm -g
+$ npm install netlify-cli -g
 ```
 
 Install NPM packages:
@@ -54,7 +54,7 @@ Ensure server is running locally at http://localhost:8888/ or appropriate port
 
 ## Testing
 
-Create POST request using API Platform such as Postman, ensuring the request body is valid JSON
+Create POST request using API Platform such as Postman, ensuring the request body is valid JSON, for example:
 
 ```
 {
@@ -70,17 +70,17 @@ Payload response should be displayed as following:
 
 ## Future Developments
 
-**Additional Error Handlings**
-Ensure all error cases are handled and try/catches used appropriately
-
 **Automated Testing**
-Implement a library such as JestJS or otherwise to integrate automated testing
+Implement a library such as JestJS or otherwise facilitate automated testing
 
 **Prod Endpoint**
-POST API requests to lvie URL rather than necessitating local hosting
+POST API requests to live URL rather than necessitating local hosting
 
 **.Net**
 I'd like to be able to recreate this project using the .Net framework
+
+**Additional Error Handlings**
+Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for.
 
 
 ## Created by
