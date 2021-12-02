@@ -88,8 +88,8 @@ I'd like to be able to recreate this project using the .Net framework.
 
 Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for. 
 Additional error catches would also allow for more communicative logs for developers when error patching, so I'd definitely like
-to include more error logs. If it was a larger scale project, something liek Sentry's error tracking software would be nice to 
-integrate.
+to include more error logs. If it was a larger scale project, something like Sentry's error tracking software would be nice to 
+integrate. I'd also like, if the initial robot GET request fails, then GET requesting the mirrored API endpoint (https://svtrobotics.free.beeceptor.com/robots).
 
 **Basic FrontEnd**
 
