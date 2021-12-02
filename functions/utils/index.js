@@ -38,7 +38,7 @@ module.exports = {
         }
         return availableRobots;
     },
-    handleFilterRobots: async (robots, requestRobot) => {
+    handleFilterRobots: (robots, requestRobot) => {
         const { xCoord, yCoord } = requestRobot;
         const distanceUnit = 10;
 
@@ -65,7 +65,7 @@ module.exports = {
         log && console.log('Robot with highest charge', chargedNearby);
         return chargedNearby;
     },
-    handleValidatePayload: async payload => {
+    handleValidatePayload: payload => {
         const { robotId, batteryLevel, distanceToGoal } = payload;
         const validPayload = {
             robotId: Number(robotId) ?? null,
