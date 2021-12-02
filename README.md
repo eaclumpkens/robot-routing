@@ -1,16 +1,13 @@
+**Robot Routing Endpoint** intakes POST request, fetching a list of 100 robots from an external API, providing their ID, current position on an xy-plane, and battery life. The endpoint returns which robot is the best to transport the load based on which is closest to the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest battery level is returned.
+
 ## Table of Contents
 
-- [Concept](#concept)
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Testing](#testing)
 - [Future Developments](#future-developments)
 - [Created By](#created-by)
 - [License](#license)
-
-## Concept
-
-API POST endpoint: receives a list of 100 robots from API GET request, providing their current position on an xy-plane along with battery life. The endpoint returns which robot is the best to transport the load based on which is closest to the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest battery level is returned.
 
 ## Technologies
 
@@ -34,26 +31,20 @@ $ npm install npm -g
 $ npm install netlify-cli -g
 ```
 
-Install NPM packages:
+Install NPM packages & run locally:
 
 ```
 $ npm i
-```
-
-To start the server locally, run the following command:
-
-```
 $ ntl dev
 ```
 
-![Run Locally](media/localhost.gif)
-
 Ensure server is running locally at http://localhost:8888/ or appropriate port
+![Run Locally](media/localhost.gif)
 
 
 ## Testing
 
-Create POST request using API Platform such as Postman, ensuring the request body is valid JSON, for example:
+Create POST request using API Platform such as Postman, ensuring the request body is valid JSON - for example:
 
 ```
 {
