@@ -25,7 +25,7 @@ $ git clone https://github.com/eaclumpkens/robot-routing.git
 $ cd ./robot-routing
 ```
 
-Once the repo is cloned and you've ensured you are in the correct repo, if not previously installed, run the following code to install NPM & Netlify's CLI:
+Once the repo is cloned and you've ensured you are in the correct directory, if not previously installed, run the following code to install NPM & Netlify's CLI:
 
 ```
 $ npm install npm -g
@@ -45,7 +45,7 @@ Ensure server is running locally at http://localhost:8888/ or appropriate port
 
 ## Testing
 
-Send POST request using API Platform such as Postman, ensuring the request body is valid JSON.
+Send POST request to endpoint ```http://localhost:8888/.netlify/functions/handleRouting``` using API Platform such as Postman, ensuring the request body is valid JSON.
 
 **Example POST Request Payload**
 ```
@@ -65,31 +65,36 @@ Send POST request using API Platform such as Postman, ensuring the request body 
 }
 ```
 
+**Example Using Postman**
+
 ![Postman](media/postman.gif)
 
 ## Future Development
 
 **Automated Testing**
 
-Implement a library such as JestJS or otherwise to facilitate automated testing
+Implement a library such as JestJS to facilitate automated testing. 
 
 **Prod Endpoint**
 
-POST API requests to live URL rather than necessitating local hosting
+POST API requests to live URL rather than necessitating local hosting which would additionally allow developers to 
+view prod function logs for lambda functions.
 
 **.Net**
 
-I'd like to be able to recreate this project using the .Net framework
+I'd like to be able to recreate this project using the .Net framework.
 
-**Additional Error Handlings**
+**Additional & More Communicative Error Handlings**
 
-Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for.
+Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for. 
+Additional error catches would also allow for more communicative logs for developers when error patching, so I'd definitely like
+to include more error logs. If it was a larger scale project, something liek Sentry's error tracking software would be nice to 
+integrate.
 
 **Basic FrontEnd**
 
 It would be nice to implement a basic frontend rendering to be able to input and test robot routing; Completing a form
 to test robot routing.
-
 
 ## Created by
 
