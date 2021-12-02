@@ -89,7 +89,7 @@ Ensure all edge cases are handled and try/catches used appropriately. I feel as 
 
 ## Created by
 
-- [Elisabeth Clumpkens](mailto:eaclumpkens@gmail.com)
+[Elisabeth Clumpkens](mailto:eaclumpkens@gmail.com)
 
 ## License
 
