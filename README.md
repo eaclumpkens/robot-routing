@@ -45,8 +45,9 @@ Ensure server is running locally at http://localhost:8888/ or appropriate port
 
 ## Testing
 
-Create POST request using API Platform such as Postman, ensuring the request body is valid JSON - for example:
+Create POST request using API Platform such as Postman, ensuring the request body is valid JSON.
 
+Example Request Payload
 ```
 {
   "loadId": 321,
@@ -59,6 +60,7 @@ Payload response should be displayed as following:
 ![Postman](media/postman.gif)
 
 
+Example Responee Payload
 ```
 {
   "robotId": 62,
