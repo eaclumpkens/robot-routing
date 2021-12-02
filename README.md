@@ -3,7 +3,7 @@
 - [Concept](#concept)
 - [Technologies](#technologies)
 - [Installation](#installation)
-- [Testing](#functionality)
+- [Testing](#testing)
 - [Future Developments](#future-developments)
 - [Links and Screenshots](#links-and-screenshots)
 - [Created By](#created-by)
