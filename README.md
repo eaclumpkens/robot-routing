@@ -47,7 +47,7 @@ Ensure server is running locally at http://localhost:8888/ or appropriate port
 
 Send POST request using API Platform such as Postman, ensuring the request body is valid JSON.
 
-**Example Request Payload**
+**Example POST Request Payload**
 ```
 {
   "loadId": 321,
