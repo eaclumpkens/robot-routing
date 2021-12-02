@@ -49,11 +49,7 @@ $ ntl dev
 
 ![Run Locally](media/localhost.gif)
 
-Ensure server is running locally at
-
-```
-http://localhost:8888/
-```
+Ensure server is running locally at http://localhost:8888/ or appropriate port
 
 
 ## Testing
