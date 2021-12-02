@@ -71,7 +71,7 @@ Send POST request using API Platform such as Postman, ensuring the request body 
 
 **Automated Testing**
 
-Implement a library such as JestJS or otherwise facilitate automated testing
+Implement a library such as JestJS or otherwise to facilitate automated testing
 
 **Prod Endpoint**
 
@@ -84,6 +84,11 @@ I'd like to be able to recreate this project using the .Net framework
 **Additional Error Handlings**
 
 Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for.
+
+**Basic FrontEnds**
+
+It would be nice to implement a basic frontend rendering to be able to input and test robot routing; Completing a form
+to test robot routing.
 
 
 ## Created by
