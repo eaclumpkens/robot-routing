@@ -14,7 +14,6 @@ exports.handler = async (event) => {
     }
 
     log && console.log('Request Body:', request);
-    
     const { loadId = null, x: xCoord = null, y: yCoord = null } = request; 
 
     // prevent null values while 0 remains valid
