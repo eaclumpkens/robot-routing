@@ -6,7 +6,7 @@ Intakes POST request, fetching a list of 100 robots from an external API, provid
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Testing](#testing)
-- [Future Developments](#future-developments)
+- [Future Development](#future-development)
 - [Created By](#created-by)
 - [License](#license)
 
@@ -67,7 +67,7 @@ Send POST request using API Platform such as Postman, ensuring the request body 
 
 ![Postman](media/postman.gif)
 
-## Future Developments
+## Future Development
 
 **Automated Testing**
 
