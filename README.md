@@ -5,7 +5,6 @@
 - [Installation](#installation)
 - [Testing](#testing)
 - [Future Developments](#future-developments)
-- [Links and Screenshots](#links-and-screenshots)
 - [Created By](#created-by)
 - [License](#license)
 
