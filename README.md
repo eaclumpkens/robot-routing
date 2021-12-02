@@ -40,12 +40,12 @@ $ ntl dev
 ```
 
 Ensure server is running locally at http://localhost:8888/ or appropriate port
-![Run Locally](media/localhost.gif)
 
+![Run Locally](media/localhost.gif)
 
 ## Testing
 
-Create POST request using API Platform such as Postman, ensuring the request body is valid JSON.
+Send POST request using API Platform such as Postman, ensuring the request body is valid JSON.
 
 **Example Request Payload**
 ```
