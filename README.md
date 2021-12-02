@@ -85,7 +85,7 @@ I'd like to be able to recreate this project using the .Net framework
 
 Ensure all edge cases are handled and try/catches used appropriately. I feel as if there are always more to be accounted for.
 
-**Basic FrontEnds**
+**Basic FrontEnd**
 
 It would be nice to implement a basic frontend rendering to be able to input and test robot routing; Completing a form
 to test robot routing.
