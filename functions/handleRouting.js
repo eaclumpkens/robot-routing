@@ -1,5 +1,5 @@
 const { fetchRobot }  = require('./utils');
-const log = true; // toggle for dev testing
+const log = false; // toggle for dev testing
 
 exports.handler = async (event) => {
     let request;
@@ -8,7 +8,7 @@ exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') return { statusCode: 405, body: 'Request method not allowed.' };
 
     // parse JSON event body
-    try { request = await JSON.parse(event.body) }
+    try { request = await event.body }
     catch (error) {
         console.log('Error parsing event body:', error);
         return { statusCode: 400, body: 'Unable to parse handleRouting event' }
@@ -34,7 +34,7 @@ exports.handler = async (event) => {
         if (robotId && batteryLevel && distanceToGoal) return { statusCode: 200, body: JSON.stringify(robotRequest) };
         else return { statusCode: 200, body: 'No nearby robots found' };
     } catch (error) {
-        console.log('Error completing handleRouting:', error);
-        return { statusCode: 500, body: 'Error completing handleRouting' };
+        console.log('Error completing handleRouting request:', error);
+        return { statusCode: 500, body: 'Error completing handleRouting request' };
     }
 };
