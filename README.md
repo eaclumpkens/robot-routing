@@ -53,11 +53,19 @@ Create POST request using API Platform such as Postman, ensuring the request bod
   "x": 40,
   "y": 35
 }
-
 ```
 
 Payload response should be displayed as following: 
 ![Postman](media/postman.gif)
+
+
+```
+{
+  "robotId": 62,
+  "batteryLevel": 70,
+  "distanceToGoal": 7.2
+}
+```
 
 ## Future Developments
 
