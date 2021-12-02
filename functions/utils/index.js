@@ -19,7 +19,7 @@ module.exports = {
 
         // validate payload & return
         let payload; 
-        try { payload = await module.exports.validatePayload(nearestChargedRobot) } 
+        try { payload = await module.exports.handleValidatePayload(nearestChargedRobot) } 
         catch(error) {
             console.log('Unable to validate payload:', error);
             throw new Error('Unable to validate payload.');
@@ -65,7 +65,7 @@ module.exports = {
         log && console.log('Robot with highest charge', chargedNearby);
         return chargedNearby;
     },
-    validatePayload: async payload => {
+    handleValidatePayload: async payload => {
         const { robotId, batteryLevel, distanceToGoal } = payload;
         const validPayload = {
             robotId: Number(robotId) ?? null,
