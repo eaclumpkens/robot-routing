@@ -1,4 +1,5 @@
-**Robot Routing Endpoint** intakes POST request, fetching a list of 100 robots from an external API, providing their ID, current position on an xy-plane, and battery life. The endpoint returns which robot is the best to transport the load based on which is closest to the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest battery level is returned.
+# Robot Routing Endpoint
+Intakes POST request, fetching a list of 100 robots from an external API, providing their ID, current position on an xy-plane, and battery life. The endpoint returns which robot is the best to transport the load based on which is closest to the load's location. If there is more than 1 robot within 10 distance units of the load, the robot with the highest battery level is returned.
 
 ## Table of Contents
 
