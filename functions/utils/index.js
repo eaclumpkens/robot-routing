@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const log = true; // toggle for dev testing
+const log = false; // toggle for dev testing
 
 module.exports = {
     fetchRobot: async (loadId, xCoord, yCoord) => {
@@ -10,35 +10,32 @@ module.exports = {
             throw new Error('Unable to fetch available robots');
         };
         
-        
         // filter robots by distance & battery level
         const nearestChargedRobot = await module.exports.handleFilterRobots(robots, { loadId, xCoord, yCoord });
         if (!nearestChargedRobot){
             console.log('Unable to locate the nearest robot')
             throw new Error('Unable to locate the nearest robot');
         };
+
+        // validate payload & return
+        let payload; 
+        try { payload = await module.exports.validatePayload(nearestChargedRobot) } 
+        catch(error) {
+            console.log('Unable to validate payload:', error);
+            throw new Error('Unable to validate payload.');
+        }
         
-        const { robotId, batteryLevel, distanceToGoal } = nearestChargedRobot;
-        const payload = {
-            robotId,
-            batteryLevel,
-            distanceToGoal
-        };
-        
-        // validate & return nearest robot with highest battery level
         return payload;
     },
     handleAvailableRobots: async () => {
         let availableRobots;
-        
-        await fetch('https://60c8ed887dafc90017ffbd56.mockapi.io/robots', { httpMethod: 'GET'})
-            .then(async res => {
-                if (res && res.status === 200) availableRobots = await res.json();
-            }).catch(error => { 
-                console.log('Error fetching robots:', error) 
-                throw new Error('Error fetching robots:', error)
-            });
-            
+        try {
+            const res = await fetch('https://60c8ed887dafc90017ffbd56.mockapi.io/robots');
+            if (res && res.status === 200) availableRobots = await res.json();
+        } catch(error) {
+            console.log('Error fetching robots:', error) 
+            throw new Error('Error fetching robots:', error)
+        }
         return availableRobots;
     },
     handleFilterRobots: async (robots, requestRobot) => {
@@ -66,7 +63,21 @@ module.exports = {
         } 
 
         log && console.log('Robot with highest charge', chargedNearby);
-
         return chargedNearby;
+    },
+    validatePayload: async payload => {
+        const { robotId, batteryLevel, distanceToGoal } = payload;
+        const validPayload = {
+            robotId: Number(robotId) ?? null,
+            batteryLevel: Number(batteryLevel) ?? null,
+            distanceToGoal: Number(distanceToGoal) ?? null
+        };
+
+        if (!validPayload.robotId || !validPayload.batteryLevel || !validPayload.distanceToGoal) {
+            console.log('Invalid payload:', payload);
+            throw new Error('Invalid payload.');
+        } 
+
+        return validPayload;
     }
 };

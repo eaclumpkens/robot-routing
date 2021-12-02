@@ -13,6 +13,8 @@ exports.handler = async (event) => {
         console.log('Error parsing event body:', error);
         return { statusCode: 400, body: 'Unable to parse handleRouting event' }
     }
+
+    log && console.log('Request Body:', request);
     
     const { loadId = null, x: xCoord = null, y: yCoord = null } = request; 
 
@@ -27,10 +29,12 @@ exports.handler = async (event) => {
         const robotRequest  = await fetchRobot(loadId, xCoord, yCoord);
         const { robotId, batteryLevel, distanceToGoal } = robotRequest;
 
-        if (robotId && batteryLevel && distanceToGoal ) return { statusCode: 200, body: JSON.stringify(robotRequest) };
+        log && console.log('Request Response:', robotRequest);
+        
+        if (robotId && batteryLevel && distanceToGoal) return { statusCode: 200, body: JSON.stringify(robotRequest) };
         else return { statusCode: 200, body: 'No nearby robots found' };
     } catch (error) {
-        console.log('Error completing handleRouting:', error)
-        return { statusCode: 500, body: 'Error completing handleRouting' }
+        console.log('Error completing handleRouting:', error);
+        return { statusCode: 500, body: 'Error completing handleRouting' };
     }
 };
